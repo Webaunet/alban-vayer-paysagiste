@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact paysagiste à Beynes (78) | Alban Vayer</title>
+<meta name="description" content="Contactez Alban Vayer, paysagiste à Beynes (78), au 06 12 33 76 09 ou par e-mail, et préparez votre demande avec le formulaire.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="top">
+  <div class="wrap head-in">
+    <a class="logo" href="https://webaunet.github.io/alban-vayer-paysagiste/" aria-label="Alban Vayer Paysagiste, accueil"><b>Alban Vayer</b><span>Paysagiste</span></a>
+    <nav class="nav" id="menu" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn btn-primary head-cta" href="tel:+33612337609" aria-label="Appeler le 06 12 33 76 09"><span class="long">06 12 33 76 09</span><span aria-hidden="true" class="short">Appeler</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+  <section class="page-head" aria-labelledby="h1">
+    <div class="wrap ph-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1 id="h1">Parlons de votre jardin</h1>
+        <p class="lead">Un appel suffit pour décrire votre projet. Vous pouvez aussi préparer votre message avec le formulaire ci-dessous.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+33612337609">Appeler le 06 12 33 76 09</a>
+          <a class="btn btn-dark" href="#formulaire">Préparer mon message</a>
+        </div>
+      </div>
+      <div class="panel">
+        <img src="images/allee-paves-jardin.jpg" width="1408" height="768" alt="Allée dallée en pierre bordée d'un muret fleuri, menant à une maison de campagne en pierre" fetchpriority="high">
+        <strong>Alban Vayer, paysagiste</strong>
+        <a class="tel" href="tel:+33612337609">06 12 33 76 09</a>
+        <a class="mail" href="mailto:alban.vayer@gmail.com">alban.vayer@gmail.com</a>
+        <span>Beynes (78)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-form" id="formulaire" aria-labelledby="t-form">
+    <div class="wrap form-wrap">
+      <div>
+        <p class="eyebrow">Formulaire</p>
+        <h2 class="section-title" id="t-form">Préparez votre demande</h2>
+        <p class="section-intro">Ce site ne peut pas envoyer de message à votre place. Remplissez le formulaire : vous obtenez un message prêt à copier ou à envoyer par e-mail, et un bouton pour appeler.</p>
+        <form class="form" id="contact-form" novalidate style="margin-top:1.8rem">
+          <div class="field"><label for="nom">Nom <span class="req" aria-hidden="true">*</span></label><input id="nom" name="nom" type="text" autocomplete="name" required aria-describedby="err-nom"><p class="err" id="err-nom" role="alert"></p></div>
+          <div class="field"><label for="tel">Téléphone <span class="req" aria-hidden="true">*</span></label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="err-tel"><p class="err" id="err-tel" role="alert"></p></div>
+          <div class="field"><label for="email">E-mail (facultatif)</label><input id="email" name="email" type="email" autocomplete="email" aria-describedby="err-email"><p class="err" id="err-email" role="alert"></p></div>
+          <div class="field"><label for="projet">Type de demande <span class="req" aria-hidden="true">*</span></label>
+            <select id="projet" name="projet" required aria-describedby="err-projet"><option value="">Choisir…</option><option>Création d'espaces verts</option><option>Entretien d'espaces verts</option><option>Arrosage automatique</option><option>Autre demande</option></select><p class="err" id="err-projet" role="alert"></p></div>
+          <div class="field"><label for="message">Votre message <span class="req" aria-hidden="true">*</span></label><textarea id="message" name="message" required aria-describedby="err-message"></textarea><p class="err" id="err-message" role="alert"></p></div>
+          <p class="hint"><span class="req" aria-hidden="true">*</span> Champs obligatoires</p>
+          <button class="btn btn-primary" type="submit">Préparer mon message</button>
+        </form>
+      </div>
+      <aside aria-label="Récapitulatif de la demande">
+        <div class="recap" id="recap" tabindex="-1" hidden>
+          <h3>Votre message est prêt</h3>
+          <pre id="recap-text"></pre>
+          <div class="actions">
+            <button class="btn btn-primary" type="button" id="copy-btn">Copier</button>
+            <a class="btn btn-ghost" href="tel:+33612337609">Appeler</a>
+            <a class="btn btn-ghost" id="recap-mail" href="mailto:alban.vayer@gmail.com?subject=Demande%20pour%20mon%20jardin">Envoyer par e-mail</a>
+            <button class="btn btn-ghost" type="button" id="edit-btn">Modifier</button>
+          </div>
+          <p class="status" id="copy-status" role="status"></p>
+        </div>
+        <p class="hint" style="margin-top:1rem">Votre message reste dans votre navigateur tant que vous ne l'envoyez pas vous-même.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <span><strong>Alban Vayer Paysagiste</strong> · Beynes (78)</span>
+    <nav class="foot-nav" aria-label="Pied de page"><a href="prestations.html">Prestations</a><a href="realisations.html">Réalisations</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></nav>
+    <span><a href="tel:+33612337609">06 12 33 76 09</a><a href="mailto:alban.vayer@gmail.com">alban.vayer@gmail.com</a></span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
