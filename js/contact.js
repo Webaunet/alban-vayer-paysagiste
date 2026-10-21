@@ -57,7 +57,12 @@
       status.textContent = 'Copie automatique impossible : le message est sélectionné, faites Ctrl+C.';
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { status.textContent = 'Message copié.'; }, fallback);
+      var done = false;
+      var timer = setTimeout(function () { if (!done) { done = true; fallback(); } }, 1500);
+      navigator.clipboard.writeText(text).then(
+        function () { if (!done) { done = true; clearTimeout(timer); status.textContent = 'Message copié.'; } },
+        function () { if (!done) { done = true; clearTimeout(timer); fallback(); } }
+      );
     } else { fallback(); }
   });
   document.getElementById('edit-btn').addEventListener('click', function () {
